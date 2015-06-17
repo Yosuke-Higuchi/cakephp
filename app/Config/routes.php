@@ -24,12 +24,7 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-
-//  If you want to see the CakePHP home page, use this line.
-/*	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home')); */
- 
-
-	Router::connect('/', array('controller' => 'posts', 'action' => 'index'));
+	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

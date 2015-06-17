@@ -70,7 +70,7 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 
-CakePlugin::loadAll();
+CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
 
 /**
  * To prefer app translation over plugin translation, you can set
