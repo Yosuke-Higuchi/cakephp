@@ -12,7 +12,7 @@
 
 <!-- ここで$posts配列をループして、投稿情報を表示 -->
 
-    <?php foreach ($posts as $post): ?>
+    <?php foreach ($posts as $post): ?>	//foreach()関数．posts@PostsControllerのindex()
     <tr>
         <td><?php echo $post['Post']['id']; ?></td>
         <td>

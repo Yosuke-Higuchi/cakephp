@@ -1,0 +1,5 @@
+・this : class 内から、自class 内の変数や関数を呼ぶ時に使う．(@PostController)
+・set() を使って、コントローラからビューにデータを渡している．(@PostController)
+・find() : Model::find()関数．データを取得する．(@PostController)
+・find('all') : 配列で結果を返す．
+$this->Html : オブジェクト．CakePHPの HtmlHelper クラスのインスタンス.
