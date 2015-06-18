@@ -1,0 +1,25 @@
+.topmenu button{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    color: #fff;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px ;
+    background-color: #000000
+
+}
+
+
+.topinformation{
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: solid 1px #524e4e;
+    border-radius: 5px;
+}
+
+.informationcontents{
+    margin: 10px;
+}

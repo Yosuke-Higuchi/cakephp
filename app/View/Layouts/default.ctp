@@ -61,7 +61,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
 
-	//フラッシュメッセージをふわっと消す用
+	<!--フラッシュメッセージをふわっと消す用-->
 	<script>
 	$(function(){
 		setTimeout(function(){

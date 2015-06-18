@@ -95,6 +95,8 @@ CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  * ));
  */
+
+
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'
@@ -114,3 +116,5 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+CakePlugin::load(array('TwitterBootstrap'));
