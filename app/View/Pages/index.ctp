@@ -1,3 +1,6 @@
+<!-- ページタイトル -->
+<?php $this->set('title_for_layout', 'Hi Wiki'); ?>
+
 <div class="topinformation">
 	<h2>Information</h2>
 	<div class="informationcontents">
@@ -19,3 +22,4 @@
 
 
 </div>
+
