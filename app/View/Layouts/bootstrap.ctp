@@ -49,7 +49,8 @@
 					<span class="icon-bar"></span>
 				</a>
 				-->
-				<a class="brand" href="/hiwiki">HI Wiki</a>
+	<!-- 			<a class="brand" href="/hiwiki">HI Wiki</a>    運用する際はこっち　-->
+				<a class="brand" href="/cakephp">HI Wiki</a>
 				<!--
 				<div class="nav-collapse">
 					<ul class="nav">
