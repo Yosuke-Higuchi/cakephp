@@ -12,7 +12,7 @@
 </div>
 
 <div class="topmenu">
-	<button onclick="location.href='<?php echo $this->html->url('/Zemilogs/index');?>';">ゼミログ</button>
+	<button onclick="location.href='<?php echo $this->html->url('/Zemilogs');?>';">ゼミログ</button>
 	<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">メンバー</button>
 	<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">スケジュール</button>
 	<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">在室状況</button>

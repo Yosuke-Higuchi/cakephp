@@ -32,8 +32,11 @@
 	<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
 	-->
 	<?php
+	echo $this->Html->meta('icon');
+	echo $this->Html->css('cake.generic');
 	echo $this->fetch('meta');
 	echo $this->fetch('css');
+	echo $this->fetch('script');
 	?>
 </head>
 
@@ -78,6 +81,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 	<?php echo $this->Html->script('bootstrap.min'); ?>
 	<?php echo $this->fetch('script'); ?>
+	
+	
 
 </body>
 </html>
