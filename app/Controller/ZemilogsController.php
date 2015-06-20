@@ -5,7 +5,6 @@ class ZemilogsController extends AppController {
 			'Form' 
 	);
 	public function index() {
-		// すべて表示
 		$this->set ( 'zemilogs', $this->Zemilog->find ( 'all' ) );
 	}
 	public function view($id = NULL) {

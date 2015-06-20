@@ -1,10 +1,24 @@
-<!-- Zemilogs -->
-<!--  pagetitle -->
+<!-- ゼミログのページ -->
 
+<!--  タイトルバー -->
 <?php $this->set('title_for_layout', 'ゼミログ'); ?>
 
+<!--  タイトル -->
 <h2>ゼミログ</h2>
 
+<!--  記事の追加ボタン -->
+<p>
+<?php
+
+echo $this->Html->link ( '記事の追加', array (
+		'controller' => 'Zemilogs',
+		'action' => 'add' 
+) );
+?>
+
+</p>
+
+<!-- ゼミログリスト -->
 <ul>
 <?php foreach ($zemilogs as $zemilog): ?>
 <li>
@@ -19,13 +33,9 @@
  <?php unset($zemilog); ?>
 </ul>
 
-<!--  記事の追加 -->
-<?php
 
-echo $this->Html->link ( '記事の追加', array (
-		'controller' => 'Zemilogs',
-		'action' => 'add' 
-) );
-?>
+<!-- 戻るボタン -->
+<p><?php  echo $this->Html->link('HOMEに戻る',array('controller'=>'pages', 'action'=> 'index'))?></p>
+
 
 

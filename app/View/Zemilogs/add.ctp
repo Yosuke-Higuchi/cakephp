@@ -1,5 +1,12 @@
-<h2>記事の追加</h2>
+<!-- 記事追加のページ -->
 
+<!--  タイトルバー -->
+<?php $this->set('title_for_layout', '記事追加 - ゼミログ'); ?>
+
+<!-- タイトル -->
+<h2>記事追加</h2>
+
+<!-- 追加内容 -->
 <?php
 echo $this->Form->create ( 'Zemilog' );
 echo $this->Form->input ( 'title' );

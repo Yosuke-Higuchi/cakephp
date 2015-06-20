@@ -17,9 +17,7 @@
 	<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">スケジュール</button>
 	<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">在室状況</button>
 	<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">アポ取り</button>
-	<button onclick="location.href='<?php echo $this->html->url('/Documents/index');?>';">ドキュメント</button>
-	<button onclick="location.href='<?php echo $this->html->url('/Papers/index');?>';">論文DB</button>
-
-
+	<button onclick="location.href='<?php echo $this->html->url('/Documents');?>';">ドキュメント</button>
+	<button onclick="location.href='<?php echo $this->html->url('/Papers/index');?>';">論文DB</button>	
 </div>
 

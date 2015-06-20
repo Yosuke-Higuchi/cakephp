@@ -1,3 +1,8 @@
+<!-- ゼミログの表示 -->
+
+<!--  タイトルバー -->
+<?php $this->set('title_for_layout',$zemilog['Zemilog']['title']); ?>
+
 <!-- タイトル -->
 <h2><?php echo h($zemilog['Zemilog']['title']);?></h2>
 
@@ -21,4 +26,6 @@ echo $this->Form->postLink ( '削除', array (
 ) );
 ?>
 
+
+<!-- 戻るボタン -->
 <p><?php  echo $this->Html->link('戻る',array('controller'=>'Zemilogs', 'action'=> 'index'))?></p>
