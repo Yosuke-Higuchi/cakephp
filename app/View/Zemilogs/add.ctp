@@ -7,3 +7,5 @@ echo $this->Form->input ( 'host' );
 echo $this->Form->input ( 'log' );
 echo $this->Form->input ( 'body');
 echo $this->Form->end ( '投稿' );
+
+?>

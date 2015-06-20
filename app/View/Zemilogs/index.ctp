@@ -14,6 +14,7 @@
 	echo $this->Html->link ( $zemilog ['Zemilog'] ['title'], '/Zemilogs/view/' . $zemilog ['Zemilog'] ['id'] );
 	
 	?>
+	<?php  echo $this->Html->link('編集',array('action'=>'edit', $zemilog ['Zemilog'] ['id']))?>
 </li>
 <?php endforeach; ?>
  <?php unset($zemilog); ?>
