@@ -14,7 +14,6 @@
 	echo $this->Html->link ( $zemilog ['Zemilog'] ['title'], '/Zemilogs/view/' . $zemilog ['Zemilog'] ['id'] );
 	
 	?>
-	<?php  echo $this->Html->link('編集',array('action'=>'edit', $zemilog ['Zemilog'] ['id']))?>
 </li>
 <?php endforeach; ?>
  <?php unset($zemilog); ?>
@@ -29,4 +28,4 @@ echo $this->Html->link ( '記事の追加', array (
 ) );
 ?>
 
-<p>ゼミログの一覧を表示しよう！</p>
+

@@ -1,4 +1,24 @@
+<!-- タイトル -->
 <h2><?php echo h($zemilog['Zemilog']['title']);?></h2>
-<p><?php echo h($zemilog['Zemilog']['host']);?></p>
-<p><?php echo h($zemilog['Zemilog']['log']);?></p>
+
+<!-- 担当者 -->
+<p>司会：<?php echo h($zemilog['Zemilog']['host']);?>
+   ログ：<?php echo h($zemilog['Zemilog']['log']);?></p>
+
+<!-- 本文 -->
 <p><?php echo h($zemilog['Zemilog']['body']);?></p>
+
+<!-- 編集ボタン -->
+<?php  echo $this->Html->link('編集',array('action'=>'edit', $zemilog ['Zemilog'] ['id']))?>
+
+<!-- 削除ボタン -->
+<?php
+echo $this->Form->postLink ( '削除', array (
+		'action' => 'delete',
+		$zemilog ['Zemilog'] ['id'] 
+), array (
+		'confirm' => '削除しますか？' 
+) );
+?>
+
+<p><?php  echo $this->Html->link('戻る',array('controller'=>'Zemilogs', 'action'=> 'index'))?></p>
