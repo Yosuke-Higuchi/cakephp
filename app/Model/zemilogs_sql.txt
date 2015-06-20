@@ -1,0 +1,16 @@
+CREATE TABLE zemilogs(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50),	/*タイトル*/
+    host VARCHAR(15),	/*司会担当*/
+    log VARCHAR(15),	/*ログ担当*/
+    body TEXT,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+
+insert into zemilogs (title, host, log, body, created, modified) values
+('o月xx日','sato','suzuki','aaaa',now(),now()),
+('o月xo日','sato2','suzuki2','bbbb',now(),now()),
+('o月oo日','sato3','suzuki3','cccc',now(),now());
+

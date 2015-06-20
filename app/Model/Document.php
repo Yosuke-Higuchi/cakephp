@@ -1,5 +1,5 @@
 <?php
-class Docments extends AppModel {
+class Document extends AppModel {
 	
 }
 ?>

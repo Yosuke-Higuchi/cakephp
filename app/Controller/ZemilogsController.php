@@ -5,11 +5,14 @@ class ZemilogsController extends AppController {
 			'Form' 
 	);
 	public function index() {
-		$this->set ( 'zemilogs', $this->Zemilog->find ( 'all' ) );
+		$params = array (
+				'order' => 'title desc' 
+		);
+		$this->set ( 'zemilogs', $this->Zemilog->find ( 'all', $params ) );
 	}
 	public function view($id = NULL) {
 		if (! $id) {
-			throw new NotFoundException ( __ ( 'Invalid post' ) );
+			throw new NotFoundException ( __ ( '無効な記事です．' ) );
 		}
 		$this->Zemilog->id = $id;
 		$this->set ( 'zemilog', $this->Zemilog->read () );
@@ -17,12 +20,12 @@ class ZemilogsController extends AppController {
 	public function add() {
 		if ($this->request->is ( 'post' )) {
 			if ($this->Zemilog->save ( $this->request->data )) {
-				$this->Session->setFlash ( 'Success!' );
+				$this->Session->setFlash ( '編集成功' );
 				$this->redirect ( array (
 						'action' => 'index' 
 				) );
 			} else {
-				$this->Session->setFlash ( 'Failed!' );
+				$this->Session->setFlash ( '編集失敗' );
 			}
 		}
 	}
@@ -33,12 +36,12 @@ class ZemilogsController extends AppController {
 			$this->request->data = $this->Zemilog->read ();
 		} else {
 			if ($this->Zemilog->save ( $this->request->data )) {
-				$this->Session->setFlash ( 'Success' );
+				$this->Session->setFlash ( '編集成功' );
 				$this->redirect ( array (
 						'action' => 'index' 
 				) );
 			} else {
-				$this->Session->setFlash ( 'Failed' );
+				$this->Session->setFlash ( '編集失敗' );
 			}
 		}
 	}

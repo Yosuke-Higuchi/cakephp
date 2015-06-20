@@ -12,7 +12,7 @@
 echo $this->Form->create ( 'Zemilog', array (
 		'action' => 'edit' 
 ) );
-echo $this->Form->input ( 'title' );
+echo $this->Form->input ( 'title');
 echo $this->Form->input ( 'host' );
 echo $this->Form->input ( 'log' );
 echo $this->Form->input ( 'body', array (
