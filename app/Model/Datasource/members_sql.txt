@@ -1,0 +1,15 @@
+CREATE TABLE members(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),	/*名前*/
+    yearofgraduation INT DEFAULT 0, /*卒業年*/
+    body TEXT,	/*記事*/
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL,
+    grade VARCHAR(10) 
+);
+
+
+insert into members (title, body,yerofgraduation, created, modified,grade) values
+('AAAA','# aaaa',0,now(),now(),'M2'),
+('BBBB','# bbbb',0,now(),now(),'M2'),
+('CCCC','# cccc',0,now(),now(),'M1');

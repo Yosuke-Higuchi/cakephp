@@ -35,6 +35,8 @@
 	Router::connect('/Zemilogs/', array('controller' => 'Zemilogs', 'action' => 'index'));
 	//ドキュメント
 	Router::connect('/Documents/', array('controller' => 'Documents', 'action' => 'index'));
+	//メンバー
+	Router::connect('/Members/', array('controller' => 'Members', 'action' => 'index'));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

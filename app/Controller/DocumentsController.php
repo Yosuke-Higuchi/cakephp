@@ -5,11 +5,9 @@ class DocumentsController extends AppController {
 			'Form',
 			'Markdown' 
 	);
-	
 	public function index() {
 		$this->set ( 'documents', $this->Document->find ( 'all' ) );
 	}
-	
 	public function view($id = NULL) {
 		if (! $id) {
 			throw new NotFoundException ( __ ( '無効な記事です．' ) );
@@ -17,7 +15,6 @@ class DocumentsController extends AppController {
 		$this->Document->id = $id;
 		$this->set ( 'document', $this->Document->read () );
 	}
-	
 	public function add() {
 		if ($this->request->is ( 'post' )) {
 			if ($this->Document->save ( $this->request->data )) {
@@ -39,6 +36,7 @@ class DocumentsController extends AppController {
 			if ($this->Document->save ( $this->request->data )) {
 				$this->Session->setFlash ( '編集成功' );
 				$this->redirect ( array (
+						'controller' => 'Documents',
 						'action' => 'index' 
 				) );
 			} else {

@@ -1,0 +1,13 @@
+CREATE TABLE documents(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50),	/*タイトル*/
+    body TEXT,	/*記事*/
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+
+insert into documents (title, body, created, modified) values
+('title1','# aaaa',now(),now()),
+('title2','# bbbb',now(),now()),
+('title3','# cccc',now(),now());
