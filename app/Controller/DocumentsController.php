@@ -18,12 +18,12 @@ class DocumentsController extends AppController {
 	public function add() {
 		if ($this->request->is ( 'post' )) {
 			if ($this->Document->save ( $this->request->data )) {
-				$this->Session->setFlash ( '編集成功' );
+				$this->Session->setFlash ( '追加成功' );
 				$this->redirect ( array (
 						'action' => 'index' 
 				) );
 			} else {
-				$this->Session->setFlash ( '編集失敗' );
+				$this->Session->setFlash ( '追加失敗' );
 			}
 		}
 	}
@@ -37,7 +37,7 @@ class DocumentsController extends AppController {
 				$this->Session->setFlash ( '編集成功' );
 				$this->redirect ( array (
 						'controller' => 'Documents',
-						'action' => 'index' 
+						'action' => 'view/'.$id
 				) );
 			} else {
 				$this->Session->setFlash ( '編集失敗' );

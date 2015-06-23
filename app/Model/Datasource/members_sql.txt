@@ -5,7 +5,7 @@ CREATE TABLE members(
     body TEXT,	/*記事*/
     created DATETIME DEFAULT NULL,
     modified DATETIME DEFAULT NULL,
-    grade VARCHAR(10) 
+    grade VARCHAR(10) /*今の学年*/
 );
 
 

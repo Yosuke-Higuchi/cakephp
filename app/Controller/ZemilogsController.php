@@ -38,7 +38,8 @@ class ZemilogsController extends AppController {
 			if ($this->Zemilog->save ( $this->request->data )) {
 				$this->Session->setFlash ( '編集成功' );
 				$this->redirect ( array (
-						'action' => 'index' 
+						'controller' => 'Zemilogs',
+						'action' => 'view/'.$id 
 				) );
 			} else {
 				$this->Session->setFlash ( '編集失敗' );
