@@ -34,5 +34,10 @@ html, body{
     border: solid 5px #362F3C;
     border-radius: 20px;
     background-color: #FFFFFF;
+}
 
+.topmenu button:active{
+    width: 145px;
+    height: 145px;
+    font-size: 19px;
 }
