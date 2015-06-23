@@ -23,7 +23,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $cakeDescription ?>:
-		<?php echo $this->fetch('title'); ?>
+  		<?php echo $this->fetch('title'); ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
@@ -34,6 +34,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	<script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
 </head>
 <body>
 	<div id="container">
@@ -58,6 +59,16 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			</p>
 		</div>
 	</div>
-	<!-- <?php echo $this->element('sql_dump'); ?>-->
+	<?php echo $this->element('sql_dump'); ?>
+
+	<!--フラッシュメッセージをふわっと消す用-->
+	<script>
+	$(function(){
+		setTimeout(function(){
+			$('#flashMessage').fadeOut('slow');
+		},800);
+	});
+	</script>
+
 </body>
 </html>
