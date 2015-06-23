@@ -53,9 +53,8 @@ body {
 					<span class="icon-bar"></span>
 				</a>
 				-->
-				<!--  ><a class="brand" href="/hiwiki">HI Wiki</a> 運用するときはこっち　-->
-				<a class="brand" href="/cakephp">HI Wiki</a>
-				<!--
+				  <a class="brand" href="/hiwiki">HI Wiki</a> <!--  運用するときはこっち　-->
+			<!--  	<a class="brand" href="/cakephp">HI Wiki</a> yukawa  -->			<!--
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li class="active"><a href="#">Home</a></li>
