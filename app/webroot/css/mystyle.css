@@ -1,25 +1,38 @@
-.topmenu button{
-    margin: 10px;
-    width: 150px;
-    height: 150px;
-    font-size: 30px;
-    color: #fff;
-    padding: 10px;
-    border: 0px;
-    border-radius: 10px ;
-    background-color: #000000
-
+html, body{
+    background: #EBEBEA;
+    border: solid 3px #57B196;
 }
 
-
 .topinformation{
+    color: #2F3448;
     margin: 10px;
-    padding: 10px;
-    background-color: #fff;
-    border: solid 1px #524e4e;
-    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 30px;
+    background: #FAF4EF;
+    border-top: solid 20px #FF837B;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
 }
 
 .informationcontents{
-    margin: 10px;
+    font-size: 18px;
+    margin: 20px;
+    color: #2F3448;
+}
+
+.topmenu{
+    text-align: center;
+}
+
+.topmenu button{
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    color: #362F3C;
+    padding: 10px;
+    border: solid 5px #362F3C;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+
 }
