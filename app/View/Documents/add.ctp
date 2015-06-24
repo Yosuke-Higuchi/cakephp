@@ -9,10 +9,15 @@
 <!-- 追加内容 -->
 <?php
 echo $this->Form->create ( 'Document' );
-echo $this->Form->input ( 'title' );
-echo $this->Form->input ( 'body');
+echo $this->Form->input ( 'title', array (
+		'label' => 'タイトル' 
+) );
+echo $this->Form->input ( 'body', array (
+		'label' => '内容',
+		'style' => 'width:60%',
+		'rows' => '10' 
+) );
 echo $this->Form->end ( '投稿' );
-
 ?>
 
 <!-- 戻るボタン -->

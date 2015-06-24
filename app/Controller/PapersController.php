@@ -32,7 +32,7 @@ class PapersController extends AppController {
 				break;
 			
 			default : // 並び順を選ぶとここに飛ぶ
-			          // id順
+			          // id順って言った
 				$this->set ( 'papers', $this->Paper->find ( 'all' ), array (
 						'order' => 'Paper.id DESC' 
 				) );

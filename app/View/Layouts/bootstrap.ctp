@@ -1,9 +1,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>
-	<?php echo $title_for_layout; ?>
-</title>
+<title><?php echo $title_for_layout; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -36,6 +34,9 @@ body {
 	echo $this->fetch ( 'meta' );
 	echo $this->fetch ( 'css' );
 	?>
+	<link
+	href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+	rel="stylesheet">
 </head>
 
 <body>
@@ -73,6 +74,8 @@ body {
 
 	</div>
 	<!-- /container -->
+
+
 
 	<!-- Le javascript
     ================================================== -->

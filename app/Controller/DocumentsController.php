@@ -6,7 +6,10 @@ class DocumentsController extends AppController {
 			'Markdown' 
 	);
 	public function index() {
-		$this->set ( 'documents', $this->Document->find ( 'all' ) );
+		$params = array (
+				'order' => 'created desc' 
+		);
+		$this->set ( 'documents', $this->Document->find ( 'all', $params ) );
 	}
 	public function view($id = NULL) {
 		if (! $id) {
@@ -18,26 +21,27 @@ class DocumentsController extends AppController {
 	public function add() {
 		if ($this->request->is ( 'post' )) {
 			if ($this->Document->save ( $this->request->data )) {
-				$this->Session->setFlash ( '追加成功' );
+				// $this->Session->setFlash ( '編集成功' );
 				$this->redirect ( array (
-						'action' => 'index' 
+						'action' => 'view',
+						$this->Document->id 
 				) );
 			} else {
-				$this->Session->setFlash ( '追加失敗' );
+				$this->Session->setFlash ( '編集失敗' );
 			}
 		}
 	}
 	public function edit($id = null) {
 		$this->Document->id = $id;
-		
 		if ($this->request->is ( 'get' )) {
 			$this->request->data = $this->Document->read ();
 		} else {
 			if ($this->Document->save ( $this->request->data )) {
-				$this->Session->setFlash ( '編集成功' );
+				// $this->Session->setFlash ( '編集成功' );
 				$this->redirect ( array (
 						'controller' => 'Documents',
-						'action' => 'view/'.$id
+						'action' => 'view',
+						$this->Document->id 
 				) );
 			} else {
 				$this->Session->setFlash ( '編集失敗' );
@@ -48,17 +52,14 @@ class DocumentsController extends AppController {
 		if ($this->request->is ( 'get' )) {
 			throw new MethodNotAllowedException ();
 		}
-		
 		if ($this->Document->delete ( $id )) {
-			$this->Session->setFlash ( __ ( '削除成功' ) );
+			// $this->Session->setFlash ( __ ( '削除成功' ) );
 		} else {
 			$this->Session->setFlash ( __ ( '削除失敗' ) );
 		}
-		
 		return $this->redirect ( array (
 				'action' => 'index' 
 		) );
 	}
 }
-
 ?>

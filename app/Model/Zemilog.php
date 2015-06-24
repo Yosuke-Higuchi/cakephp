@@ -1,5 +1,6 @@
 <?php
 class Zemilog extends AppModel {
+	public $name = 'Zemilog';
 	
 	public $validate = array (
 			'title' => array (

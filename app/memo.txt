@@ -13,6 +13,10 @@
 -日付順に並び替え化（降順）
 -本文をMarkdown方式にしてもいいかも？（未実装6/24）
 -編集で保存ボタンを押したらその編集した奴が見れるように改良
+-トップページに最新のゼミログを表示できるようにした
+--PagesControllerで
+public $uses = array('Page','Zemilog');
+と書いてZemilogのモデル（zemilogsテーブル）を使えるようにしたらできた．
 
 #ドキュメント部作成
 -とりあえず，Model,Controller,Viewを作成（形だけ）
