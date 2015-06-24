@@ -28,7 +28,6 @@
 			// debug($zemilog);
 			// echo h($zemilog['Zemilog']['title']);
 			echo $this->Html->link ( $zemilog ['Zemilog'] ['title'], '/Zemilogs/view/' . $zemilog ['Zemilog'] ['id'] );
-
 			?>
 		</li>
 		<?php endforeach; ?>

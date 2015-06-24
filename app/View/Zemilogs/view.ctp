@@ -28,7 +28,7 @@
             ログ：<?php echo h($zemilog['Zemilog']['log']);?></p>
             <!-- 本文 -->
         <p>
-            <?php echo h( $zemilog['Zemilog']['body'] );?>
+            <?php echo  nl2br ( $zemilog['Zemilog']['body'] );?>
         </p>
     </div>
 </div>

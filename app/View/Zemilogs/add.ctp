@@ -17,7 +17,6 @@ echo $this->Form->input ( 'host' , array('label' => '司会'));
 echo $this->Form->input ( 'log' , array('label' => 'ログ'));
 echo $this->Form->input ( 'body' , array('label' => '内容',  'style' => 'width:60%', 'rows' => '10'));
 echo $this->Form->end ( '投稿' );
-
 ?>
 
 <!-- 戻るボタン -->

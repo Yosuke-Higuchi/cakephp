@@ -69,7 +69,7 @@ echo $this->Html->link ( '記事の追加', array (
 </ul>
  <?php unset($member); ?>
 
-<!-- 戻るボタン -->
+<!-- 戻るボタン
 <p><?php  echo $this->Html->link('HOMEに戻る',array('controller'=>'pages', 'action'=> 'index'))?></p>
-
+ -->
 
