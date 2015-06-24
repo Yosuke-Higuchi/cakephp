@@ -1,6 +1,16 @@
 html, body{
     background: #EBEBEA;
-    border: solid 3px #57B196;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    color: #2F3448;
+}
+
+li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a{
+    color:#2F3448;
 }
 
 .topinformation{
@@ -22,6 +32,7 @@ html, body{
 
 .topmenu{
     text-align: center;
+    margin-top: 40px;
 }
 
 .topmenu button{
@@ -30,14 +41,68 @@ html, body{
     height: 150px;
     font-size: 20px;
     color: #362F3C;
-    padding: 10px;
-    border: solid 5px #362F3C;
+    padding: 5px;
+    border: solid 0px;
     border-radius: 20px;
-    background-color: #FFFFFF;
+    background-color: #FFD25A;
 }
 
 .topmenu button:active{
-    width: 145px;
-    height: 145px;
-    font-size: 19px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.myiconstyle{
+    font-size: 50px;
+    margin: 10px;
+    margin-bottom: 20px;
+    color: #362F3C;
+}
+
+.listindex{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #FAF4EF;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
+}
+
+.listindex .top{
+    padding: 10px;
+    background: #FFD25A;
+}
+
+.top .title{
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    float:left;
+}
+
+.top .icons{
+    text-align: right;
+    font-size: 20px;
+}
+
+.listindex .middle{
+    padding: 20px;
+}
+
+.listview{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #FAF4EF;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
+}
+
+.listview .top{
+    padding: 10px;
+    background: #FF837B;
+}
+
+.listview .middle{
+    padding: 20px;
 }

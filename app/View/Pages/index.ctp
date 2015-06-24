@@ -14,28 +14,63 @@
 <div class="topmenu">
 	<div class="row">
 		<div class="span3">
-			<button onclick="location.href='<?php echo $this->html->url('/Zemilogs/index');?>';">ゼミログ</button>
+			<button onclick="location.href='<?php echo $this->html->url('/Zemilogs/index');?>';">
+				<p class="myiconstyle">
+					<i class="fa fa-pencil-square"></i>
+				</p>
+				ゼミログ
+				</button>
 		</div>
 		<div class="span3">
-			<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">メンバー</button>
+			<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">
+				<p class="myiconstyle">
+					<i class="fa fa-users"></i>
+				</p>
+				メンバー
+				</button>
 		</div>
 		<div class="span3">
-			<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">スケジュール</button>
+			<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">
+				<p class="myiconstyle">
+					<i class="fa fa-calendar"></i>
+				</p>
+				スケジュール
+				</button>
 		</div>
 		<div class="span3">
-			<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">在室状況</button>
+			<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">
+				<p class="myiconstyle">
+					<i class="fa fa-eye"></i>
+				</p>
+				在室状況
+				</button>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="span3">
-			<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">アポ取り</button>
+			<button onclick="location.href='<?php echo $this->html->url('/Members/index');?>';">
+				<p class="myiconstyle">
+					<i class="fa fa-comments"></i>
+				</p>
+				アポ取り
+				</button>
 		</div>
 		<div class="span3">
-			<button onclick="location.href='<?php echo $this->html->url('/Documents/index');?>';">ドキュメント</button>
+			<button onclick="location.href='<?php echo $this->html->url('/Documents/index');?>';">
+				<p class="myiconstyle">
+					<i class="fa fa-book"></i>
+				</p>
+				ドキュメント
+				</button>
 		</div>
 		<div class="span3">
-			<button onclick="location.href='<?php echo $this->html->url('/Papers/index');?>';">論文DB</button>
+			<button onclick="location.href='<?php echo $this->html->url('/Papers/index');?>';">
+				<p class="myiconstyle">
+					<i class="fa fa-desktop"></i>
+				</p>
+				論文DB
+				</button>
 		</div>
 		<div class="span3">
 

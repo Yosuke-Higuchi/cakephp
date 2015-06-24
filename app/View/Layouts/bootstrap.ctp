@@ -35,6 +35,7 @@
 	echo $this->fetch('meta');
 	echo $this->fetch('css');
 	?>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>
@@ -71,6 +72,8 @@
 		<?php echo $this->fetch('content'); ?>
 
 	</div> <!-- /container -->
+
+
 
 	<!-- Le javascript
     ================================================== -->
