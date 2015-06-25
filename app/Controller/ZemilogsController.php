@@ -1,17 +1,42 @@
 <?php
 class ZemilogsController extends AppController {
-	public $helper = array (
+	public $helpers = array (
 			'Html',
 			'Form',
 			'Markdown' 
 	);
 	public function index() {
-		$params = array (
-				'order' => 'title desc'
-		);
-		$this->set ( 'zemilogs', $this->Zemilog->find ( 'all', $params ) );
+		$this->set ( 'zemilogs_this_year', $this->Zemilog->find ( 'all', array (
+				'order' => 'created desc',
+				'conditions' => array (
+						'title like' => date ( "Y%" ) 
+				) 
+		) ) );
+		$this->set ( 'zemilogs_last_year', $this->Zemilog->find ( 'all', array (
+				'order' => 'created desc',
+				'conditions' => array (
+						'title like' => date ( "Y%", strtotime ( "-1 year" ) ) 
+				) 
+		) ) );
 	}
 	public function view($id = NULL) {
+		if (! $id) {
+			throw new NotFoundException ( __ ( '無効な記事です．' ) );
+		}
+		$this->Zemilog->id = $id;
+		$this->set ( 'zemilog', $this->Zemilog->read () );
+	}
+	public function past($id = NULL) {
+		$this->set ( 'zemilogs_past_year', $this->Zemilog->find ( 'all', array (
+				'order' => 'title desc',
+				'conditions' => array (	//この書き方がANDでつないでることになる模様です．
+					array(	'title not like' => date ( "Y%" )),
+					array(	'title not like' => date ( "Y%", strtotime ( "-1 year" ) )) 
+						) )
+				) 
+		) ;
+	}
+	public function pastview($id = NULL) {
 		if (! $id) {
 			throw new NotFoundException ( __ ( '無効な記事です．' ) );
 		}

@@ -1,4 +1,4 @@
-<!-- ゼミログの表示 -->
+<!-- 過去のゼミログの表示 -->
 
 <!--  タイトルバー -->
 <?php $this->set('title_for_layout',$zemilog['Zemilog']['title']); ?>
@@ -36,8 +36,8 @@
 <!-- 戻るボタン -->
 <p style="text-align:right;">
     <?php
-    echo $this->Html->link('<i class="fa fa-arrow-circle-left"></i> ゼミログへ戻る',
-    array('controller'=>'Zemilogs', 'action'=> 'index'),
+    echo $this->Html->link('<i class="fa fa-arrow-circle-left"></i> 過去のゼミログへ戻る',
+    array('controller'=>'Zemilogs', 'action'=> 'past'),
     array('escape' => false));
     ?>
 </p>

@@ -1,6 +1,6 @@
 <?php
 class PapersController extends AppController {
-	public $helper = array (
+	public $helpers = array (
 			'Html',
 			'Form'
 	);

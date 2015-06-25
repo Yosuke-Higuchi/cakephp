@@ -8,9 +8,9 @@
 	<div class="informationcontents">
 		<!-- ゼミログの内容を取得して表示する -->
 		<p><?php echo h($zemilogs['Zemilog']['title']);?>のゼミログ</p>
-		<p>
-            <?php echo  nl2br ( $zemilogs['Zemilog']['body'] );?>
-        </p>
+		<?php
+		echo Markdown($zemilogs ['Zemilog'] ['body'] );
+		?>
 	</div>
 </div>
 

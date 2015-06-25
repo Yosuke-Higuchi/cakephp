@@ -34,5 +34,6 @@
 	</div>
 </div>
 
-<!-- 戻るボタン -->
+<!-- 戻るボタン 
 <p><?php  echo $this->Html->link('HOMEに戻る',array('controller'=>'pages', 'action'=> 'index'))?></p>
+-->

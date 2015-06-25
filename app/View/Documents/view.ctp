@@ -29,7 +29,7 @@
 <div class="middle">
 	<!-- 記事本文 -->
 	<?php
-	echo Markdown ( $document ['Document'] ['body'] );
+	echo Markdown($document ['Document'] ['body']);
 	?>
 </div>
 </div>

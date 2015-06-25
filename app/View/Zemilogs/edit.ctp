@@ -16,9 +16,11 @@ echo $this->Form->input ( 'title');
 echo $this->Form->input ( 'host' );
 echo $this->Form->input ( 'log' );
 echo $this->Form->input ( 'body', array (
-		'rows' => 3 
+		'label' => '内容',
+		'style' => 'width:60%',
+		'rows' => '10'
 ) );
-echo $this->Form->end ( '保存' );
+echo $this->Form->end ( '上書き保存' );
 
 ?>
 

@@ -11,12 +11,16 @@
 -いったん終了(6/20)
 -追加するときに日付入力を自動化
 -日付順に並び替え化（降順）
--本文をMarkdown方式にしてもいいかも？（未実装6/24）
+-本文をMarkdown方式にしてもいいかも？（未実装6/24）（実装6/25)
+--ヘルパーsにMarkdownを追加し，Markdown()関数を使用すればよい．
 -編集で保存ボタンを押したらその編集した奴が見れるように改良
 -トップページに最新のゼミログを表示できるようにした
 --PagesControllerで
 public $uses = array('Page','Zemilog');
 と書いてZemilogのモデル（zemilogsテーブル）を使えるようにしたらできた．
+-今年と昨年のみの表示に
+-過去年はpast.ctpページで処理
+
 
 #ドキュメント部作成
 -とりあえず，Model,Controller,Viewを作成（形だけ）
@@ -30,6 +34,7 @@ public $uses = array('Page','Zemilog');
 -テーブルdocuments作成（/Model/Datasource/documents_sql.txtに詳細）
 -ZemilogのようなDocuments完成
 -Markdown入力で編集できるように改良
+--ヘルパーsにMarkdownを追加し，Markdown()関数を使用すればよい．
 -編集で保存ボタンを押したらその編集した奴が見れるように改良
 
 #メンバー部
@@ -39,6 +44,7 @@ public $uses = array('Page','Zemilog');
 -学年の属性により自動で移動
 -卒業生のところは年度分けなど改良したい．
 -編集で保存ボタンを押したらその編集した奴が見れるように改良
+-ゼミログのアルゴリズムを使ったら，卒業生の年度分けできそう．
 
 #スケジュール部
 -ページだけ作成

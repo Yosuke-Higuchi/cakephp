@@ -2,9 +2,10 @@
 class PagesController extends AppController {
 	public $name = 'Pages';
 	public $uses = array('Page','Zemilog'); //Zemilogモデルを利用!!!!
-	public $helper = array (
+	public $helpers = array (
 			'Html',
-			'Form'
+			'Form',
+			'Markdown' 
 	);
 	public function index() {
 		// ゼミログから内容取ってきて、変数につめる処理書く
