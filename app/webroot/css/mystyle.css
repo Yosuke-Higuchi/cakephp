@@ -13,6 +13,12 @@ a {
 	color: #2F3448;
 }
 
+.table{
+	width: 100%;
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
 .topinformation {
 	color: #2F3448;
 	margin: 10px;
@@ -83,6 +89,14 @@ a {
 .top .icons {
 	text-align: right;
 	font-size: 20px;
+}
+
+.icons form{
+	margin-bottom: 0px;
+}
+
+.icons select{
+	margin-bottom: 0px;
 }
 
 .listindex .middle {

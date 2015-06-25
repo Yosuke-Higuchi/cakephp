@@ -10,13 +10,17 @@
 <!-- 編集内容 -->
 <?php
 echo $this->Form->create ( 'Document', array (
-		'action' => 'edit' 
+		'action' => 'edit'
 ) );
-echo $this->Form->input ( 'title' );
+echo $this->Form->input ( 'title', array (
+		'label' => 'タイトル'
+) );
 echo $this->Form->input ( 'body', array (
-		'rows' => 10 
+		'label' => '内容',
+		'style' => 'width:60%',
+		'rows' => '10'
 ) );
-echo $this->Form->end ( '保存' );
+echo $this->Form->end ( '上書き保存' );
 
 ?>
 
