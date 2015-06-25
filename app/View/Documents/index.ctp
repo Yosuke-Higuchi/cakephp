@@ -9,11 +9,11 @@
 		<div class="icons">
 			<!--  記事の追加ボタン -->
 			<?php
-			echo $this->Html->link ( '<i class="fa fa-pencil"></i>', array (
+			echo $this->Html->link ( '<i class="fa fa-plus"></i>', array (
 					'controller' => 'Documents',
-					'action' => 'add' 
+					'action' => 'add'
 			), array (
-					'escape' => false 
+					'escape' => false
 			) );
 			?>
 		</div>

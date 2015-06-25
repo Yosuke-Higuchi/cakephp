@@ -4,16 +4,15 @@ class PagesController extends AppController {
 	public $uses = array('Page','Zemilog'); //Zemilogモデルを利用!!!!
 	public $helper = array (
 			'Html',
-			'Form' 
+			'Form'
 	);
 	public function index() {
 		// ゼミログから内容取ってきて、変数につめる処理書く
 		// その後に、Pages/index.ctpを書く
-	
+
 		$params = array (
-				'order' => 'title desc' 
+				'order' => 'created desc'
 		);
 		$this->set ( 'zemilogs', $this->Zemilog->find ( 'first', $params ) );
 	}
 }
-
