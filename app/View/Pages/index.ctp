@@ -1,3 +1,8 @@
+<!-- トップページ -->
+
+<!--  タイトルバー -->
+<?php $this->set('title_for_layout', 'HI Wiki'); ?>
+
 <div class="topinformation">
 	<h2>今週のお知らせ</h2>
 	<div class="informationcontents">
