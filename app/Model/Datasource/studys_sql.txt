@@ -1,0 +1,8 @@
+CREATE TABLE studies(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50),	/* タイトル */
+    item VARCHAR(10), /* 勉強会か輪講か */
+    content TEXT,	/* 内容 */
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);

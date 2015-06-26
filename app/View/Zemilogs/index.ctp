@@ -12,9 +12,9 @@
 			<?php
 			echo $this->Html->link ( '<i class="fa fa-plus"></i>', array (
 					'controller' => 'Zemilogs',
-					'action' => 'add' 
+					'action' => 'add'
 			), array (
-					'escape' => false 
+					'escape' => false
 			) );
 			?>
 		</div>
@@ -23,7 +23,7 @@
 	<div class="middle">
 		<!-- ゼミログリスト -->
 		<!-- 今年 -->
-		
+
 		<ul>
 		<h4><?php echo date("Y年")?></h4>
 		<?php foreach ($zemilogs_this_year as $zemilog): ?>
@@ -39,7 +39,7 @@
 			<br>
 		</p>
 		<!-- 昨年 -->
-		
+
 		<ul>
 		<h4><?php echo date("Y年",strtotime("-1 year"))?></h4>
 		<?php foreach ($zemilogs_last_year as $zemilog): ?>
@@ -55,7 +55,7 @@
 			<br>
 		</p>
 		<!-- 過去 -->
-		
+
 		<ul>
 		<h4>過去のゼミログ</h4>
 		<li>
@@ -64,11 +64,12 @@
 		?>
 		</li>
 		</ul>
-		
+
 	</div>
 </div>
 
-
-<!-- 戻るボタン
-<p><?php  echo $this->Html->link('HOMEに戻る',array('controller'=>'pages', 'action'=> 'index'))?></p>
--->
+<!-- 戻るボタン-->
+<p style="text-align:right;"><?php
+echo $this->Html->link('<i class="fa fa-home"></i> HOMEに戻る',
+array('controller'=>'pages', 'action'=> 'index'), array('escape' => false));
+?></p>

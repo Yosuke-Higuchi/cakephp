@@ -78,17 +78,12 @@
 </div>
 
 
+<!-- 戻るボタン-->
+<p style="text-align:right;"><?php
+echo $this->Html->link('<i class="fa fa-home"></i> HOMEに戻る',
+array('controller'=>'pages', 'action'=> 'index'), array('escape' => false));
+?></p>
 
-
-
-
-
-<!-- 戻るボタン
-<p>
-    <br>
-</p>
-<p><?php  echo $this->Html->link('HOMEに戻る',array('controller'=>'Pages', 'action'=> 'index'))?></p>
--->
 
 
 

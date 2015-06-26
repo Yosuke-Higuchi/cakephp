@@ -77,11 +77,19 @@
 			<button
 				onclick="location.href='<?php echo $this->html->url('/Papers');?>';">
 				<p class="myiconstyle">
-					<i class="fa fa-desktop"></i>
+					<i class="fa fa-database"></i>
 				</p>
 				論文DB
 			</button>
 		</div>
-		<div class="span3"></div>
+		<div class="span3">
+			<button
+				onclick="location.href='<?php echo $this->html->url('/Studies');?>';">
+				<p class="myiconstyle">
+					<i class="fa fa-pie-chart"></i>
+				</p>
+				勉強会＆輪講
+			</button>
+		</div>
 	</div>
 </div>

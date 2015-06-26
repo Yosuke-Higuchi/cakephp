@@ -35,7 +35,7 @@ echo $this->fetch ( 'meta' );
 echo $this->fetch ( 'css' );
 ?>
 <link
-href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css"
 rel="stylesheet">
 </head>
 
@@ -68,7 +68,7 @@ rel="stylesheet">
 
 <div class="container">
 
-	<?php echo $this->Session->flash(); ?>
+<!--	<?php echo $this->Session->flash(); ?>   -->
 
 	<?php echo $this->fetch('content'); ?>
 

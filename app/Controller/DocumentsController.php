@@ -3,14 +3,15 @@ class DocumentsController extends AppController {
 	public $helpers = array (
 			'Html',
 			'Form',
-			'Markdown' 
+			'Markdown'
 	);
 	public function index() {
 		$params = array (
-				'order' => 'created desc' 
+				'order' => 'created desc'
 		);
 		$this->set ( 'documents', $this->Document->find ( 'all', $params ) );
 	}
+
 	public function view($id = NULL) {
 		if (! $id) {
 			throw new NotFoundException ( __ ( '無効な記事です．' ) );
@@ -18,13 +19,14 @@ class DocumentsController extends AppController {
 		$this->Document->id = $id;
 		$this->set ( 'document', $this->Document->read () );
 	}
+
 	public function add() {
 		if ($this->request->is ( 'post' )) {
 			if ($this->Document->save ( $this->request->data )) {
 				// $this->Session->setFlash ( '編集成功' );
 				$this->redirect ( array (
 						'action' => 'view',
-						$this->Document->id 
+						$this->Document->id
 				) );
 			} else {
 				$this->Session->setFlash ( '編集失敗' );
@@ -41,7 +43,7 @@ class DocumentsController extends AppController {
 				$this->redirect ( array (
 						'controller' => 'Documents',
 						'action' => 'view',
-						$this->Document->id 
+						$this->Document->id
 				) );
 			} else {
 				$this->Session->setFlash ( '編集失敗' );
@@ -58,7 +60,7 @@ class DocumentsController extends AppController {
 			$this->Session->setFlash ( __ ( '削除失敗' ) );
 		}
 		return $this->redirect ( array (
-				'action' => 'index' 
+				'action' => 'index'
 		) );
 	}
 }
