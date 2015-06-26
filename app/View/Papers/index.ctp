@@ -42,7 +42,7 @@
             <th style="width:4em">読者</th>
             <th>論文名</th>
             <th>研究内容</th>
-            <th style="width:2em"></th>
+            <th style="width:3.5em"></th>
         </tr>
         <?php foreach ($papers as $paper)  : ?>
             <tr id="paper_<?php echo h($paper['Paper']['id']); ?>">
@@ -58,18 +58,21 @@
                     echo nl2br ( $paper ['Paper'] ['content'] )?>
                 </td>
                 <td>
+                    <?php
+                    echo $this->Html->link ('<i class="fa fa-download"></i>', array(
+                        'action' => 'download',
+                        $paper['Paper']['id']
+                    ), array ('confirm' => 'ダウンロードしますか？','escape' => false));
+                    ?>
                     <?php echo $this->Html->link('<i class="fa fa-pencil"></i>',
                     array('action'=>'edit',$paper['Paper']['id']),array('escape' => false)); ?>
                     <!--?php echo $this->Html->link('削除','#',array('class' => 'delete', 'data-post-id'=>$paper['Paper']['id'])); ?-->
                     <?php
                     echo $this->Form->postLink ( '<i class="fa fa-trash-o"></i>', array (
                     'action' => 'delete',
-                    $paper ['Paper'] ['id']
-                ), array (
-                'confirm' => '削除しますか？',
-                'escape' =>false
-                ) );
-                ?>
+                    $paper ['Paper'] ['id']),
+                    array ('confirm' => '削除しますか？','escape' =>false) );
+                    ?>
                 </td>
             </tr>
         <?php endforeach; ?>

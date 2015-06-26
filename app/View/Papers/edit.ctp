@@ -18,6 +18,7 @@ echo $this->Form->input ( 'content', array (
 		'style' => 'width:60%',
 		'rows' => '10'
 ) );
+echo $this->Form->input ('upload file', array('type' => 'file','label' => 'PDFファイル'));
 echo $this->Form->end ( '論文を上書きする' );
 echo $this->Form->submit ( 'キャンセル', array (
 		'name' => 'cancel',

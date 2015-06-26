@@ -8,7 +8,7 @@
 
 <!-- 追加内容 -->
 <?php
-echo $this->Form->create ( 'Paper' );
+echo $this->Form->create ( 'Paper' , array('enctype' => 'multipart/form-data'));
 echo $this->Form->input ( 'readername' ,array('label' => '読者'));
 echo $this->Form->input ( 'title' ,array('label' => '論文名', 'style' => 'width:60%'));
 echo $this->Form->input ( 'content', array (
@@ -16,6 +16,7 @@ echo $this->Form->input ( 'content', array (
 		'style' => 'width:60%',
 		'rows' => '10'
 ) );
+echo $this->Form->input ('upload file', array('type' => 'file','label' => 'PDFファイル'));
 echo $this->Form->end ( '論文を保存する' );
 echo $this->Form->submit ( 'キャンセル', array (
 		'name' => 'cancel',
