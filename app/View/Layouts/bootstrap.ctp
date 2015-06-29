@@ -16,6 +16,8 @@
 	</style>
 	<?php echo $this->Html->css('bootstrap-responsive'); ?>
 	<?php echo $this->Html->css('mystyle'); ?>
+	<?php echo $this->Html->css('sticky_footer_navbar'); ?>
+
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -72,6 +74,11 @@ rel="stylesheet">
 
 	<?php echo $this->fetch('content'); ?>
 
+	<footer class="footer">
+		<p>
+			all right researved.
+		</p>
+	</footer>
 </div>
 <!-- /container -->
 
