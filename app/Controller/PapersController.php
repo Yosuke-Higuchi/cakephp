@@ -104,11 +104,16 @@ class PapersController extends AppController {
 
 		//viewを使用しない
 		$this->autoRender = false;
-
 		$file_path = WWW_ROOT.'files'.DS.$filename.'.pdf';
 
-		$this->response->file($file_path, array('download' => true));
+		$file = new File($file_path);
 
-		$this->response->download($filename.'.pdf');
+		if($file->exists()){
+				$this->response->file($file_path, array('download' => true));
+				$this->response->download($filename.'.pdf');
+		}
+		else{
+			throw new NotFoundException();
+		}
 	}
 }
