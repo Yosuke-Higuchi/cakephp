@@ -83,13 +83,24 @@ class PapersController extends AppController {
 		) );
 	}
 
-	public function edit($id = null) {
+	public function edit($id) {
 		$this->Paper->id = $id;
 
 		if ($this->request->is ( 'get' )) { // edit画面に移ろうとしたとき
-			$this->request->data = $this->Paper->read ();
+			$this->request->data = $this->Paper->read();
 		} else { // 編集が終わって保存したいとき
 			if ($this->Paper->save ( $this->request->data )) { // 保存がうまく行ったとき
+
+				//アップロードファイル情報の取得
+				$file = $this->request->data['Paper']['upload file'];
+				//ファイルのリネーム
+				$file['name'] = $this->Paper->id.'.pdf';
+				//エンコードをするなら，下をコメントアウトして，SJIS部分をエンコードしたいものに変える
+				//$file['name'] = mb_convert_encoding($file['name'], "SJIS", "AUTO");
+
+				//ファイルの保存処理（cakephp/webroot）
+				move_uploaded_file($file['tmp_name'], WWW_ROOT.'files'.DS.$file['name']);
+
 				//$this->Session->setFlash ( '保存成功' );
 				$this->redirect ( array (
 						'action' => 'index'
@@ -109,8 +120,8 @@ class PapersController extends AppController {
 		$file = new File($file_path);
 
 		if($file->exists()){
-				$this->response->file($file_path, array('download' => true));
-				$this->response->download($filename.'.pdf');
+			$this->response->file($file_path, array('download' => true));
+			$this->response->download($filename.'.pdf');
 		}
 		else{
 			throw new NotFoundException();

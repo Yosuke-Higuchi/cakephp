@@ -9,7 +9,8 @@
 <!-- 編集内容 -->
 <?php
 echo $this->Form->create ( 'Paper', array (
-		'action' => 'edit'
+		'action' => 'edit',
+		'enctype' => 'multipart/form-data'
 ) );
 echo $this->Form->input ( 'readername' ,array('label' => '読者'));
 echo $this->Form->input ( 'title' ,array('label' => '論文名', 'style' => 'width:60%'));
